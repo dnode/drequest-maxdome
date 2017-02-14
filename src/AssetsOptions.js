@@ -11,7 +11,7 @@ class AssetsOptions {
     this.protocol = protocol;
   }
 
-  toDRequestOptions() {
+  toRequestOptions() {
     return {
       method: 'get',
       transform: data => data.assetList.map(

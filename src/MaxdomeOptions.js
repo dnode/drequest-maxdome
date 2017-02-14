@@ -18,7 +18,7 @@ class MaxdomeOptions {
     this.protocol = protocol;
   }
 
-  toDRequestOptions() {
+  toRequestOptions() {
     return {
       headers: {
         accept: 'application/json',

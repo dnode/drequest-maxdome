@@ -49,7 +49,7 @@ class AssetsQueryOptions {
     return this;
   }
 
-  toDRequestOptions() {
+  toRequestOptions() {
     return {
       url: {
         query: this._query,
