@@ -1,0 +1,21 @@
+{
+  "name": "drequest-maxdome",
+  "version": "1.0.0",
+  "description": "Building maxdome requests step by step in a modularized way",
+  "license": "MIT",
+  "homepage": "http://github.com/dnode/drequest-maxdome",
+  "author": {
+    "name": "Sharaal",
+    "email": "developer@dragonprojects.de",
+    "url": "http://dragonprojects.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnode/drequest-maxdome.git"
+  },
+  "readmeFilename": "README.md",
+  "main": "src/lib.js",
+  "dependencies": {
+    "drequest": "^1.0.0"
+  }
+}
