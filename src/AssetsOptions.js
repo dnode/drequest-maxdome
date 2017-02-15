@@ -15,10 +15,10 @@ class AssetsOptions {
     return {
       method: 'get',
       transform: data => data.assetList.map(
-        data => new Asset(data, { hostname: this.hostname, protocol: this.protocol })
+        asset => new Asset(asset, { hostname: this.hostname, protocol: this.protocol }),
       ),
       url: {
-        path: 'v1/mxd/assets'
+        path: 'v1/mxd/assets',
       },
     };
   }
