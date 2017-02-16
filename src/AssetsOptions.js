@@ -14,9 +14,10 @@ class AssetsOptions {
   toRequestOptions() {
     return {
       method: 'get',
-      transform: data => data.assetList.map(
-        asset => new Asset(asset, { hostname: this.hostname, protocol: this.protocol }),
-      ),
+      transform: data => data.assetList.map(asset => new Asset(asset, {
+        hostname: this.hostname,
+        protocol: this.protocol,
+      })),
       url: {
         path: 'v1/mxd/assets',
       },
