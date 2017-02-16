@@ -9,7 +9,7 @@
 # Initialisation
 
 ```
-const { Request, RequestBuilder } = require('drequest');
+const RequestBuilder = require('drequest').RequestBuilder;
 const { AssetsOptions, MaxdomeOptions } = require('drequest-maxdome');
 
 const maxdome =
