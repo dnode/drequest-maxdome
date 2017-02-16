@@ -12,7 +12,7 @@
 const { Request, RequestBuilder } = require('drequest');
 const { AssetsOptions, MaxdomeOptions } = require('drequest-maxdome');
 
-const requestBuilder =
+const maxdome =
   new RequestBuilder()
     .names('maxdome')
     .options('assets', new AssetsOptions())
@@ -38,7 +38,7 @@ const assetId = <assetId>;
 const assetsQueryOptions = new AssetsQueryOptions(assetId);
 
 const assets =
-  await requestBuilder.request('assets')
+  await maxdome.request('assets')
     .options(assetsQueryOptions)
     .send();
 ```
@@ -57,7 +57,7 @@ const assetsQueryOptions =
     .query('pageSize', 3);
     
 const assets =
-  await requestBuilder.request('assets')
+  await maxdome.request('assets')
     .options(assetsQueryOptions)
     .send();
 ```
@@ -79,7 +79,7 @@ const assetsQueryOptions =
     .sort('activeLicenseStart', 'desc');
     
 const assets =
-  await requestBuilder.request('assets')
+  await maxdome.request('assets')
     .options(assetsQueryOptions)
     .send();
 ```
