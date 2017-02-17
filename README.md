@@ -52,9 +52,9 @@ const AssetsQueryOptions = require('drequest-maxdome').AssetsQueryOptions;
 const title = '<title>';
 const assetsQueryOptions = 
   new AssetsQueryOptions()
-    .filter('contentTypeSeriesOrMovies')
-    .filter('search', title)
-    .query('pageSize', 3);
+    .addFilter('contentTypeSeriesOrMovies')
+    .addFilter('search', title)
+    .addQuery('pageSize', 3);
     
 const assets =
   await maxdome.request('assets')
@@ -71,12 +71,12 @@ const AssetsQueryOptions = require('drequest-maxdome').AssetsQueryOptions;
 const title = '<title>';
 const assetsQueryOptions = 
   new AssetsQueryOptions()
-    .filter('availableWithoutPackage')
-    .filter('movies')
-    .filter('new')
-    .filter('notUnlisted')
-    .query('pageSize', 50)
-    .sort('activeLicenseStart', 'desc');
+    .addFilter('availableWithoutPackage')
+    .addFilter('movies')
+    .addFilter('new')
+    .addFilter('notUnlisted')
+    .addQuery('pageSize', 50)
+    .addSort('activeLicenseStart', 'desc');
     
 const assets =
   await maxdome.request('assets')
