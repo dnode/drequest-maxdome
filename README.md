@@ -14,9 +14,9 @@ const { AssetsOptions, MaxdomeOptions } = require('drequest-maxdome');
 
 const maxdome =
   new RequestBuilder()
-    .options('maxdome', new MaxdomeOptions())
-    .names('maxdome')
-    .options('assets', new AssetsOptions());
+    .setOptions('maxdome', new MaxdomeOptions())
+    .addNames('maxdome')
+    .setOptions('assets', new AssetsOptions());
 ```
 
 **Attention**: `drequest-maxdome` will use several information from the `package.json` and add them to the headers. This makes it easier to identify the source of the request in the logs of maxdome if there are issues.
@@ -39,7 +39,7 @@ const assetsQueryOptions = new AssetsQueryOptions(assetId);
 
 const assets =
   await maxdome.request('assets')
-    .options(assetsQueryOptions)
+    .addOptions(assetsQueryOptions)
     .send();
 ```
 
@@ -58,7 +58,7 @@ const assetsQueryOptions =
     
 const assets =
   await maxdome.request('assets')
-    .options(assetsQueryOptions)
+    .addOptions(assetsQueryOptions)
     .send();
 ```
 
@@ -80,6 +80,6 @@ const assetsQueryOptions =
     
 const assets =
   await maxdome.request('assets')
-    .options(assetsQueryOptions)
+    .addOptions(assetsQueryOptions)
     .send();
 ```
