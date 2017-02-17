@@ -5,4 +5,5 @@ module.exports = {
   AssetsOptions: require('./AssetsOptions'),
   AssetsQueryOptions: require('./AssetsQueryOptions'),
   MaxdomeOptions: require('./MaxdomeOptions'),
+  SessionOptions: require('./SessionOptions'),
 };
