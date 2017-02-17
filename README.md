@@ -3,7 +3,7 @@
 
 # Installation
 
-`npm i --save drequest-maxdome`
+`npm i --save drequest drequest-maxdome`
 
 
 # Initialisation
