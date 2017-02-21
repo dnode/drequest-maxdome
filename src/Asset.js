@@ -8,8 +8,8 @@ class Asset {
     this.id = data.id;
 
     const types = {
-      thisVideoFilm: 'movie',
-      thisVideoFilmTvSeries: 'episode',
+      assetVideoFilm: 'movie',
+      assetVideoFilmTvSeries: 'episode',
       multiAssetTvSeriesSeason: 'season',
       multiAssetBundleTvSeries: 'series',
     };
