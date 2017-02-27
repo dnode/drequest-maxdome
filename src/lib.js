@@ -13,8 +13,6 @@ module.exports = {
   getRequestBuilder: ({
     maxdomeOptions: maxdomeOptions = {},
     assetOptions: assetOptions = {},
-  } = {}) => new RequestBuilder()
-    .setOptions('maxdome', new MaxdomeOptions(maxdomeOptions))
-    .addNames('maxdome')
+  } = {}) => new RequestBuilder(new MaxdomeOptions(maxdomeOptions))
     .setOptions('assets', new AssetsOptions(assetOptions)),
 };

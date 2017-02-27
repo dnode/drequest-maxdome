@@ -1,6 +1,6 @@
 {
   "name": "drequest-maxdome",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Building maxdome requests step by step in a modularized way",
   "license": "MIT",
   "homepage": "http://github.com/dnode/drequest-maxdome",
@@ -19,7 +19,7 @@
     "lint": "eslint src"
   },
   "dependencies": {
-    "drequest": "^2.1.0"
+    "drequest": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "^3.15.0",
