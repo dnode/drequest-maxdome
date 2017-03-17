@@ -20,5 +20,5 @@ module.exports = {
     assetOptions: assetOptions = {},
   } = {}) => new RequestBuilder(new MaxdomeOptions(maxdomeOptions))
     .setOptions('assets', new AssetsOptions(assetOptions))
-    .setOptions('tipofthedays', new TipOfTheDaysOptions()),
+    .setOptions('tipOfTheDays', new TipOfTheDaysOptions()),
 };

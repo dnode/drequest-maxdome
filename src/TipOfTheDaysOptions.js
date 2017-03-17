@@ -9,7 +9,7 @@ class TipOfTheDaysOptions {
         client: 'mxd_package',
       },
       method: 'get',
-      transform: data => data.map(tipoftheday => new TipOfTheDay(tipoftheday)),
+      transform: data => data.map(tipOfTheDay => new TipOfTheDay(tipOfTheDay)),
       url: {
         path: 'v1/components/tipoftheday',
       },
