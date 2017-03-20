@@ -8,12 +8,12 @@ class Asset {
     this.id = data.id;
 
     const types = {
-      assetVideoFilm: 'movie',
-      assetVideoFilmTvSeries: 'episode',
-      multiAssetTvSeriesSeason: 'season',
-      multiAssetBundleTvSeries: 'series',
+      assetvideofilm: 'movie',
+      assetvideofilmtvseries: 'episode',
+      multiassettvseriesseason: 'season',
+      multiassetbundletvseries: 'series',
     };
-    this.type = types[data['@class']];
+    this.type = types[data['@class'].toLowerCase()];
 
     this.title = data.title;
     if (this.type === 'season') {
