@@ -8,7 +8,7 @@
 
 # Initialisation
 
-```
+```javascript
 const maxdome = require('drequest-maxdome').getRequestBuilder();
 ```
 
@@ -24,7 +24,7 @@ The information which will be used:
 
 ## Get information for a specific asset by ID
 
-```
+```javascript
 const AssetsQueryOptions = require('drequest-maxdome').AssetsQueryOptions;
 
 const assetId = <assetId>;
@@ -39,7 +39,7 @@ const assets =
 
 ## Search assets by title and get the first 3 results
 
-```
+```javascript
 const AssetsQueryOptions = require('drequest-maxdome').AssetsQueryOptions;
 
 const title = '<title>';
@@ -58,7 +58,7 @@ const assets =
 
 ## Get the 50 newest store movies
 
-```
+```javascript
 const AssetsQueryOptions = require('drequest-maxdome').AssetsQueryOptions;
 
 const title = '<title>';
