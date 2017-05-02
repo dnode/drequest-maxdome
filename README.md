@@ -1,6 +1,7 @@
 [![Dependency Status](https://david-dm.org/dnode/drequest-maxdome/status.svg)](https://david-dm.org/dnode/drequest-maxdome)
 [![devDependency Status](https://david-dm.org/dnode/drequest-maxdome/dev-status.svg)](https://david-dm.org/dnode/drequest-maxdome?type=dev)
 
+
 # Installation
 
 `npm i --save drequest-maxdome`
@@ -36,7 +37,6 @@ const assets =
     .send();
 ```
 
-
 ## Search assets by title and get the first 3 results
 
 ```javascript
@@ -54,7 +54,6 @@ const assets =
     .addOptions(assetsQueryOptions)
     .send();
 ```
-
 
 ## Get the 50 newest store movies
 
