@@ -4,7 +4,11 @@ const Review = require('./Review');
 
 class TipOfTheDay {
   constructor(data) {
-    this.review = new Review(data.review[0]);
+    const review = data.review[0];
+    if (!review) {
+      throw new Error('missing linked review in the tipOfTheDay');
+    }
+    this.review = new Review(review);
     this.published = new Date(data.published);
   }
 }
