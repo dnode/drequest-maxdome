@@ -23,7 +23,7 @@ class MaxdomeOptions {
       headers: {
         accept: 'application/json',
         client: 'mxd_store',
-        clienttype: 'Webportal',
+        clienttype: 'webportal',
         'content-type': 'application/json',
         from: (() => {
           const author = app.author;
@@ -41,10 +41,10 @@ class MaxdomeOptions {
       url: {
         hostname: this.hostname,
         protocol: this.protocol,
-        queries: [
-          `apikey=${this.apikey}`,
-          `appid=${this.appid}`,
-        ],
+        query: {
+          apikey: this.apikey,
+          appid: this.appid,
+        },
       },
     };
   }
