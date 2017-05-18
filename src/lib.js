@@ -15,10 +15,13 @@ module.exports = {
   SessionOptions: require('./SessionOptions'),
   TipOfTheDay: require('./TipOfTheDay'),
   TipOfTheDaysOptions,
-  getRequestBuilder: ({
-    maxdomeOptions: maxdomeOptions = {},
-    assetOptions: assetOptions = {},
-  } = {}) => new RequestBuilder(new MaxdomeOptions(maxdomeOptions))
-    .setOptions('assets', new AssetsOptions(assetOptions))
-    .setOptions('tipOfTheDays', new TipOfTheDaysOptions()),
+  getRequestBuilder: (
+    {
+      maxdomeOptions: maxdomeOptions = {},
+      assetOptions: assetOptions = {},
+    } = {}
+  ) =>
+    new RequestBuilder(new MaxdomeOptions(maxdomeOptions))
+      .setOptions('assets', new AssetsOptions(assetOptions))
+      .setOptions('tipOfTheDays', new TipOfTheDaysOptions()),
 };

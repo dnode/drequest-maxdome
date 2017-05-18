@@ -1,10 +1,10 @@
 'use strict';
 
 class Asset {
-  constructor(data, {
-    hostname: hostname = 'maxdome.de',
-    protocol: protocol = 'http',
-  } = {}) {
+  constructor(
+    data,
+    { hostname: hostname = 'maxdome.de', protocol: protocol = 'http' } = {}
+  ) {
     this.id = data.id;
 
     const types = {
@@ -28,7 +28,9 @@ class Asset {
     this.description = data.descriptionShort;
 
     if (data.coverList) {
-      const poster = data.coverList.filter(cover => cover.usageType === 'poster')[0];
+      const poster = data.coverList.filter(
+        cover => cover.usageType === 'poster'
+      )[0];
       if (poster) {
         this.image = poster.url;
       }
@@ -38,7 +40,10 @@ class Asset {
     if (data.fullMarkingList.includes('inPremiumIncluded')) {
       this.areas.push('package');
     }
-    if (data.mediaUsageList.includes('DTO') || data.mediaUsageList.includes('TVOD')) {
+    if (
+      data.mediaUsageList.includes('DTO') ||
+      data.mediaUsageList.includes('TVOD')
+    ) {
       this.areas.push('store');
     }
 
